@@ -68,7 +68,7 @@ class WallSubcommand extends Subcommand {
         }
         $languageProvider = LanguageManager::getInstance()->getProvider();
         $this->form = new MenuForm(
-            $languageProvider->translateString("wall.form.title"),
+            $languageProvider->translateString(["prefix", "wall.form.title"]),
             $languageProvider->translateString("wall.form.text"),
             $options,
             function (Player $player, int $selectedOption) : void {

@@ -68,7 +68,7 @@ class BorderSubcommand extends Subcommand {
         }
         $languageProvider = LanguageManager::getInstance()->getProvider();
         $this->form = new MenuForm(
-            $languageProvider->translateString("border.form.title"),
+            $languageProvider->translateString(["prefix", "border.form.title"]),
             $languageProvider->translateString("border.form.text"),
             $options,
             function (Player $player, int $selectedOption) : void {
